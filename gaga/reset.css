@@ -1,131 +1,156 @@
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  line-height: 1;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
 }
 
-ol,
-ul {
-  list-style: none;
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
 }
 
-blockquote,
-q {
-  quotes: none;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 1rem;
+    width: calc(100% / 2 - 2rem); /* 2 colunas no layout */
+    max-width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-card h3 {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+.product-card p {
+    padding: 0 1rem 1rem;
+    font-size: 1rem;
+}
+
+.product-card button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(100% / 1 - 2rem); /* 1 coluna no layout mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Online</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo -->
+</head>
+<body>
+
+    <header>
+        <h1>Loja Online</h1>
+    </header>
+
+    <div class="container">
+        <div class="products">
+            <!-- Produto 1 -->
+            <div class="product-card">
+                <img src="caminho_para_imagem1.jpg" alt="Produto 1">
+                <h3>Nome do Produto 1</h3>
+                <p>Descrição breve do produto 1.</p>
+                <button>Comprar</button>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product-card">
+                <img src="caminho_para_imagem2.jpg" alt="Produto 2">
+                <h3>Nome do Produto 2</h3>
+                <p>Descrição breve do produto 2.</p>
+                <button>Comprar</button>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="product-card">
+                <img src="caminho_para_imagem3.jpg" alt="Produto 3">
+                <h3>Nome do Produto 3</h3>
+                <p>Descrição breve do produto 3.</p>
+                <button>Comprar</button>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="product-card">
+                <img src="caminho_para_imagem4.jpg" alt="Produto 4">
+                <h3>Nome do Produto 4</h3>
+                <p>Descrição breve do produto 4.</p>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
